@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/gps
+END
+BluetoothGpsReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/gps/BluetoothGpsReader.java
+END
+CheckGps.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/gps/CheckGps.java
+END
+GpsReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/gps/GpsReader.java
+END
+NMEAParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/gps/NMEAParser.java
+END

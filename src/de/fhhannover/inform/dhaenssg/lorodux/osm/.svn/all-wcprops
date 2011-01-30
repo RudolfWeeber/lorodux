@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/osm
+END
+NodeManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/osm/NodeManager.java
+END
+Node.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/osm/Node.java
+END
+LatLon.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/osm/LatLon.java
+END
+Bounds.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/osm/Bounds.java
+END
+Tags.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/osm/Tags.java
+END

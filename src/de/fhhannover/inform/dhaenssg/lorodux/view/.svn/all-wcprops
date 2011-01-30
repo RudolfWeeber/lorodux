@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/view
+END
+SearchView.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/view/SearchView.java
+END
+AlertManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/view/AlertManager.java
+END
+SimpleInputView.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/view/SimpleInputView.java
+END
+View.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/view/View.java
+END
+NearByView.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/view/NearByView.java
+END
+FavoriteShowView.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/view/FavoriteShowView.java
+END
+MainView.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/view/MainView.java
+END
+NodeView.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/view/NodeView.java
+END
+FavoriteManageView.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/view/FavoriteManageView.java
+END
+GpsView.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/view/GpsView.java
+END
+OptionsView.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/view/OptionsView.java
+END
+OptionsDirectionView.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/view/OptionsDirectionView.java
+END
+FavoriteInputView.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/view/FavoriteInputView.java
+END
+WhereAmIView.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/view/WhereAmIView.java
+END
+BluetoothListView.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/view/BluetoothListView.java
+END

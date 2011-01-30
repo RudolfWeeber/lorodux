@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/util
+END
+GpsDataUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/util/GpsDataUtils.java
+END
+BufferedReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/util/BufferedReader.java
+END
+MathSupport.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/util/MathSupport.java
+END
+StringUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/util/StringUtils.java
+END
+GeoDirection.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/util/GeoDirection.java
+END
+GpsCalc.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/lorodux/!svn/ver/2/LoroDux/src/de/fhhannover/inform/dhaenssg/lorodux/util/GpsCalc.java
+END
