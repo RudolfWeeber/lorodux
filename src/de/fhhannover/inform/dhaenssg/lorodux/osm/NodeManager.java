@@ -103,10 +103,10 @@ public class NodeManager {
 	final Bounds boundingBox = new Bounds(lat, lon, radius);
 
 	final Vector retVec = new Vector();
-	final Enumeration enum = mNodes.elements();
+	final Enumeration en = mNodes.elements();
 	// starttime = System.currentTimeMillis();
-	while (enum.hasMoreElements()) {
-	    final Node node = (Node) enum.nextElement();
+	while (en.hasMoreElements()) {
+	    final Node node = (Node) en.nextElement();
 	    if (boundingBox.contains(node.getLat(), node.getLon())) {
 		final int nodeDist = GpsCalc.calcDistance(lat, lon,
 			node.getLat(), node.getLon());
@@ -186,9 +186,9 @@ public class NodeManager {
 	boolean stringFound;
 
 	final Vector retVec = new Vector();
-	final Enumeration enum = mNodes.elements();
-	while (enum.hasMoreElements()) {
-	    final Node node = (Node) enum.nextElement();
+	final Enumeration en = mNodes.elements();
+	while (en.hasMoreElements()) {
+	    final Node node = (Node) en.nextElement();
 	    stringFound = false;
 	    final String address = node.getAddress().toLowerCase();
 	    final String name = node.getName().toLowerCase();
@@ -265,9 +265,9 @@ public class NodeManager {
 
 	do {
 	    boundingBox = new Bounds(lat, lon, radius);
-	    final Enumeration enum = mNodes.elements();
-	    while (enum.hasMoreElements()) {
-		final Node actualNode = (Node) enum.nextElement();
+	    final Enumeration en = mNodes.elements();
+	    while (en.hasMoreElements()) {
+		final Node actualNode = (Node) en.nextElement();
 		if (boundingBox.contains(actualNode.getLat(),
 			actualNode.getLon())) {
 		    if (actualNode.getTag() == 199) { // ID für die Place-Node

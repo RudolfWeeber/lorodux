@@ -36,7 +36,6 @@ package de.fhhannover.inform.dhaenssg.lorodux;
 import java.io.IOException;
 import java.io.InputStream;
 
-import javax.microedition.location.Location;
 import javax.microedition.midlet.MIDlet;
 import javax.microedition.midlet.MIDletStateChangeException;
 import javax.microedition.rms.RecordStoreException;
@@ -45,8 +44,6 @@ import javax.microedition.rms.RecordStoreNotFoundException;
 
 import de.fhhannover.inform.dhaenssg.lorodux.datastore.FavoriteStore;
 import de.fhhannover.inform.dhaenssg.lorodux.datastore.OptionsStore;
-import de.fhhannover.inform.dhaenssg.lorodux.entity.ActualPosition;
-import de.fhhannover.inform.dhaenssg.lorodux.entity.Position;
 import de.fhhannover.inform.dhaenssg.lorodux.gps.BluetoothGpsReader;
 import de.fhhannover.inform.dhaenssg.lorodux.osm.NodeManager;
 import de.fhhannover.inform.dhaenssg.lorodux.osm.Tags;

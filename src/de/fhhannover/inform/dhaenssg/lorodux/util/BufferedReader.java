@@ -8,7 +8,6 @@
 package de.fhhannover.inform.dhaenssg.lorodux.util;
 
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.Reader;
 
 
@@ -296,7 +295,6 @@ public class BufferedReader extends Reader {
             ensureOpen();
 	    boolean omitLF = ignoreLF || skipLF;
 
-	bufferLoop:
 	    for (;;) {
 
 		if (nextChar >= nChars)
