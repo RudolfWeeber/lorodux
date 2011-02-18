@@ -7,7 +7,7 @@ DEMO=LoroDux
 LIB_DIR=../../../lib
 CLDCAPI=${LIB_DIR}/cldcapi11.jar
 MIDPAPI=${LIB_DIR}/midpapi21.jar
-JSR=${LIB_DIR}/jsr179.jar:$LIB_DIR/jsr082.jar
+JSR=${LIB_DIR}/jsr082.jar:${LIB_DIR}/jsr179.jar
 
 PREVERIFY=../../../bin/preverify
 
@@ -43,7 +43,7 @@ ${JAVAC} \
 echo "Preverifying class files..."
 
 ${PREVERIFY} \
-    -classpath ${CLDCAPI}${PATHSEP}${MIDPAPI}${PATHSEP}../tmpclasses \
+    -classpath $JSR:${CLDCAPI}${PATHSEP}${MIDPAPI}${PATHSEP}../tmpclasses \
     -d ../classes \
     ../tmpclasses
 

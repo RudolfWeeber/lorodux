@@ -5,6 +5,7 @@ MicroEdition-Configuration: CLDC-1.1
 MIDlet-1: LoroDux,,de.fhhannover.inform.dhaenssg.lorodux.LoroDux
 MicroEdition-Profile: MIDP-2.0
 MIDlet-Name: LoroDux MIDlet Suite
-MIDlet-Jar-Size: 248703
+MIDlet-Jar-Size: 252710
+
 
 
