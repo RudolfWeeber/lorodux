@@ -16,16 +16,11 @@
  */
 
 /**
- * Diese Klasse gehört zur LoroDux MIDlet Suite.
- * Sie dient der Darstellung eines ausgewählten Favoriten,
- * die Distanz vom aktuellen Standort und die absolute Richtung.
+ * This class is part of the LoroDux midlet suite
+ * Shows details of a favorite, distance to current location and absolute
+ * direction
  * @author Daniel Hänßgen
  * 
- * Version: 0.1
- * 11.04.2010	Implementierung
- * Version: 0.2
- * 12.04.2010	Aktuallisierungs-Command hinzugefügt
- * 30.06.2010 Refactored
  */
 
 package de.fhhannover.inform.dhaenssg.lorodux.view;
@@ -45,20 +40,23 @@ import de.fhhannover.inform.dhaenssg.lorodux.util.GpsCalc;
 
 public class FavoriteShowView extends View {
 
+    // Declaration of commands
     private final transient Command BACK = new Command("zurück", Command.BACK,
 	    1);
     private final transient Command REFRESH = new Command("aktualisieren",
 	    Command.OK, 0);
 
+
     private final transient FavoriteManageView mManageView;
+
     private final transient List mList;
+
     private final transient Favorite mFav;
 
     /**
-     * Konstruktor, dem Favoriten-Objekt und View übergeben wird,
-     * zu dem zurückgekehrt werden soll.
-     * @param manageView
-     * @param fav
+     * Constructor
+     * @param manageView View to return to, when done
+     * @param fav Favorite to show
      */
     public FavoriteShowView(final FavoriteManageView manageView,
 	    final Favorite fav) {
@@ -75,9 +73,8 @@ public class FavoriteShowView extends View {
     }
 
     /**
-     * Methode berechnet Distanz, Bearing und Kurs neu,
-     * stellt diese auf dem Display dar und lässt
-     * das Handy vibrieren, falls diese Funktion im Optionen-Menü eingestellt wurde.
+     * Recalc distance, bearing and course and display them
+     * Vibrate the phone, if this is activated in the config
      */
     public void refresh() {
 	final Position actualPosition = ActualPosition.getPositionCopy();

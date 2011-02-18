@@ -16,14 +16,13 @@
  */
 
 /**
- * Diese Klasse gehört zur LoroDux MIDlet Suite.
+ * This class belongs to the ?Lorodux midlet suite
  * 
- * Dient zur Darstellung die gefundenen Bluetooth-Geräte.
+ * Shows the discovererd bluetooth devices
  * 
- * Einziger View, der nicht von View erbt, da dieser View
- * nur vom BluetoothGPSReader aufgerufen werden soll.
+ * This view is not derived from the view class as it should only be called
+ * from the bluetooth gps reader class
  * 
- * Datum 14.04.2010
  */
 
 package de.fhhannover.inform.dhaenssg.lorodux.view;
@@ -50,9 +49,8 @@ public class BluetoothListView implements CommandListener {
     }
 
     /**
-     * Wird aufgerufen um gefundene Bluetooth-Geräte als Liste anzuzeigen
-     * und den View dann auf dem Display darzustellen.
-     * @param Vector mit gefundenen Bluetooth-Geräten
+     * Shows the list of discoverd devices
+     * @param Vector containing the found devices
      */
     public void displayList(Vector items) {
 	mList = null;
@@ -67,8 +65,8 @@ public class BluetoothListView implements CommandListener {
     }
 
     /**
-     * Wird ausgeführt, wenn Anwender einen Empfänger aus der Liste wählt.
-     * Veranlasst mit selectDevice() sich mit dem Gewählten zu verbinden.
+     * Is called when the user selects a device from the list
+     * Will call selectDevice() to establish connection
      */
     public void commandAction(Command c, Displayable d) {
 	if (c == List.SELECT_COMMAND) {

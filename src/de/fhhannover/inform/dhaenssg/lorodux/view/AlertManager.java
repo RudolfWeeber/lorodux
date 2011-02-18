@@ -17,13 +17,10 @@
 
 /**
  * AlertManager
- * Diese Klasse ist Zuständig für alle Info und Dialog-Fenster,
- * die mittels Alerts implementiert sind.
- * Dies ist erforderlich, um nicht nicht in die nicht-dokumentierte
- * "Alert can not revert to Alert"-Exception zu laufen.
+ * This class handles all alerts and dialogs implemented using  alert.
+ * This is necessary to avoid the undocumented
+ * "Alert can not revert to Alert"-Exception.
  * 
- * 26.03.2010 - Implementierung
- * 27.06.2010 - Refactoring
  */
 
 package de.fhhannover.inform.dhaenssg.lorodux.view;
@@ -37,16 +34,16 @@ import de.fhhannover.inform.dhaenssg.lorodux.LoroDux;
 public class AlertManager {
 
     /**
-     * Zeigt mittels Alert einen Alarm auf dem Display an
+     * Shows an alert using the J2Me Alert class
      * 
      * @param head
-     *            Titel des Alerts
+     *            Title of the alert
      * @param body
-     *            Inhalt des Alerts
+     *           Body of the alert
      */
     public static void displayAlarm(final String head, final String body) {
 	final Alert alarm = new Alert(head, body, null, AlertType.ALARM);
-	alarm.setTimeout(5000);
+	alarm.setTimeout(3000);
 	waitForOtherAlertToBeFinished();
 	Display.getDisplay(LoroDux.getInstance()).setCurrent(alarm);
     }
@@ -67,23 +64,24 @@ public class AlertManager {
 
     public static void displayWarning(final String head, final String body) {
 	final Alert warning = new Alert(head, body, null, AlertType.WARNING);
-	warning.setTimeout(5000);
+	warning.setTimeout(3000);
 	waitForOtherAlertToBeFinished();
 	Display.getDisplay(LoroDux.getInstance()).setCurrent(warning);
     }
 
     /**
-     * Diese Methode prüft, ob das aktuell dargestellte Displayable vom Typ
-     * Alert ist. Falls ja, dann wird 500 millisekunden gewartet und erneut
-     * geprüft.
+     * Wait for other alerts to finish
+     * If currently an alert is shown, wait 500 ms and try again.
+     *
      */
     private static void waitForOtherAlertToBeFinished() {
 	final Display display = Display.getDisplay(LoroDux.getInstance());
+	
+	// Probably, we should give up after a while?
 	while (display.getCurrent().getClass() == Alert.class) {
 	    try {
 		Thread.sleep(500);
 	    } catch (InterruptedException e) {
-		// Was soll man hier schon tun?!
 	    }
 	}
     }

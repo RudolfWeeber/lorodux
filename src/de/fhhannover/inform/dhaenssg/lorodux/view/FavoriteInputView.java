@@ -16,14 +16,10 @@
  */
 
 /**
- * Diese Klasse gehört zur LoroDux MIDlet Suite.
- * Sie dient zur Darstellung eines Views, der die Eingabe von
- * Name und Koordiaten für einen Favoriten ermöglicht.
- * 
+ * This class is part of the LoroDux midlet suite
+ * Displays a view for the entry of a favorite's name and coordinates
+ *
  * @author Daniel Hänßgen
- * 07.04.2010 erste Implementierung
- * 11.03.2010 zurück-Command hinzugefügt
- * 30.06.2010 Refactored und weiter kommentiert
  */
 
 package de.fhhannover.inform.dhaenssg.lorodux.view;
@@ -45,7 +41,7 @@ public class FavoriteInputView extends View {
     private final transient View mManageView;
 
     /**
-     * Deklaration der Commands
+     * Declaration of commands
      */
     private final transient Command OK = new Command("OK", Command.ITEM, 0);
     private final transient Command BACK = new Command("Abbruch", Command.BACK, 1);
@@ -59,7 +55,7 @@ public class FavoriteInputView extends View {
     private final transient Form mForm;
 
     /**
-     * Deklaration der TextFields, die auf der Form angezeigt werden
+     * Declaration of text fields shown on the form
      */
     private final transient TextField mName;
     private final transient TextField mLat;
@@ -124,9 +120,8 @@ public class FavoriteInputView extends View {
     }
 
     /**
-     * Methode baut neues Favorite Objekt und fügt sie dem FavoriteStore zu.
-     * Falls Favorit bereits vorhanden, wird Alert-Fenster gebaut, welches
-     * Fragt, ob überschrieben werden soll oder nicht.
+     * Create new favorite object and saves it
+     * If a favorite with the same name exists, ask whether to replace
      */
     private void addFavorite() {
 	final Favorite newFav = new Favorite(getName(), getLat(), getLon());
@@ -144,8 +139,7 @@ public class FavoriteInputView extends View {
     }
 
     /**
-     * commandAction Methode wird ausgeführt, wenn der/die BenutzerIn
-     * einen Command auswählt
+     * Is executed when the user selects a command
      */
     public void commandAction(final Command c, final Displayable d) {
 	switch (c.getCommandType()) {

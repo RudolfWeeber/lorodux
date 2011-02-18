@@ -16,15 +16,10 @@
  */
 
 /**
- * FavoriteManageView ist Teil der LoroDux MIDlet Suite.
- * Sie dient zur Darstellung und Bearbeitung von Favoriten.
+ * FavoriteManageView is part of the LoroDux midlet suite
+ *Used for showing and editing favorites
  * 
  * @author Daniel Hänßgen
- * Version: 0.1
- * 11.04.2010 - Implementierung
- * Version: 0.2
- * 12.04.2010 - Anpassung an zwei double statt Coordinates Object
- * 				setCoordinates mit neuem Position Object
  */
 
 package de.fhhannover.inform.dhaenssg.lorodux.view;
@@ -44,6 +39,7 @@ import de.fhhannover.inform.dhaenssg.lorodux.entity.Position;
 
 public class FavoriteManageView extends View {
 
+    // Declaration of commands
     private final transient Command ADDFAV = new Command("Favorit hinzufügen",
 	    Command.SCREEN, 0);
     private final transient Command REMFAV = new Command("Favorit entfernen",
@@ -52,7 +48,6 @@ public class FavoriteManageView extends View {
 	    Command.SCREEN, 0);
     private final transient Command ADDPOS = new Command(
 	    "Aktuelle Position als Favorit speichern", Command.SCREEN, 0);
-
     private final transient Command BACK = new Command("zurück", Command.BACK,
 	    1);
 
@@ -74,8 +69,7 @@ public class FavoriteManageView extends View {
     }
 
     /**
-     * Entfernt alle Elemente aus der Liste, holt sich die aktuellen Daten aus
-     * dem Store.
+     * Rebuild the list from the store
      */
     private void refreshList() {
 	mList.deleteAll();
@@ -87,7 +81,7 @@ public class FavoriteManageView extends View {
     }
 
     /**
-     * Leert FavoriteInputView und zeigt diesen dann zur Dateneingabe an.
+     * Shows an empty favorite entry view
      */
     private void addFavorite() {
 	mInputView = new FavoriteInputView(this);
@@ -95,8 +89,7 @@ public class FavoriteManageView extends View {
     }
 
     /**
-     * Holt sich die aktuellen Positionsdaten vom GPS-Empfänger schreibt diese
-     * auf den InputView und zeigt diesen dann an.
+     * Shows an entry view already containing current gps coordinates
      */
     private void addPosition() {
 	final Position actualPosition = ActualPosition.getPositionCopy();
@@ -107,10 +100,10 @@ public class FavoriteManageView extends View {
     }
 
     /**
-     * Entfernt ausgewählen Favoriten aus dem Store
+     * Remove a favorite from the store
      * 
      * @param index
-     *            Beinhaltet den Index des Favoriten.
+     *           Index of the favorite to remove
      */
     private void removeFavorite(final int index) {
 	FavoriteStore.remove(index);
@@ -118,10 +111,10 @@ public class FavoriteManageView extends View {
     }
 
     /**
-     * Zeigt Favorit auf FavoriteShowView an.
+     * Shows a favorite in detail
      * 
      * @param index
-     *            Beinhaltet den Index des Favoriten.
+     *           Index of the favorite to show
      */
     private void showFavorite(final int index) {
 	new FavoriteShowView(this, (Favorite) FavoriteStore.get().elementAt(
@@ -134,9 +127,7 @@ public class FavoriteManageView extends View {
     }
 
     /**
-     * Wird aufgerufen vom FavoriteInputView und holt sich die Daten aus diesem
-     * und speichert sie anschließend in den FavoriteStore, aktuallisiert die
-     * Liste und zeigt diese auf dem Display an.
+     * handles all the commands
      */
     public void commandAction(final Command c, final Displayable arg1) {
 
