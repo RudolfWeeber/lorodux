@@ -16,16 +16,10 @@
  */
 
 /**
- * Diese Klasse gehört zur LoroDux MIDlet Suite.
- * Sie dient der Darstellung des Hauptfensters und des Hauptmenüs.
+ *  This class is part of the LoroDux Midlet Suite
+ * Shows main window and main menu
  * 
  * @author Daniel Hänßgen
- * März 2010: Erste Versuche
- * 11.04.2010: Menü um Favoriten und Beenden erweitert
- * 05.05.2010: Menü um Umgebungssuche erweitert
- * 16.05.2010: Beenden mit "Sie sie sicher?" Frage erweitert
- * 16.05.2010: WhereAmIView zum Menü hinzugefügt
- * 30.06.2010: Refactored
  */
 
 package de.fhhannover.inform.dhaenssg.lorodux.view;
@@ -42,6 +36,7 @@ import de.fhhannover.inform.dhaenssg.lorodux.LoroDux;
 
 public class MainView extends View {
 
+    // Definition of commands
     private final transient Command GPSVIEW = new Command("GPS Status anzeigen",
 	    Command.SCREEN, 0);
     private final transient Command FAVORITEVIEW = new Command("Favoriten verwalten",
@@ -63,8 +58,8 @@ public class MainView extends View {
     private final transient StringItem mBody = new StringItem("Willkommen", null);
 
     /**
-     * Konstruktor
-     * @param String, der auf dem Hauptschirm angezeigt werden soll.
+     * Constructor
+     * @param String, which should be displayed on the main window.
      */
     public MainView(final String body) {
 	if (body != null) {
@@ -106,6 +101,7 @@ public class MainView extends View {
 	Display.getDisplay(LoroDux.getInstance()).setCurrent(mForm);
     }
 
+    // Handle commands
     public void commandAction(final Command c, final Displayable d) {
 	if (c == GPSVIEW) {
 	    LoroDux.showView(LoroDux.GPSVIEW);

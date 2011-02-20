@@ -16,11 +16,10 @@
  */
 
 /**
- * Diese Klasse gehört zur LoroDux MIDlet Suite.
- * Sie dient der Auswahl der Angabe der Richtung.
+ * This class belongs to the LoroDux Midlet Suite
+ * Allows for setting the way, directions are spoken
  * 
  * @author Daniel Hänßgen
- * Datum: 19.05.2010
  */
 
 package de.fhhannover.inform.dhaenssg.lorodux.view;
@@ -35,6 +34,7 @@ import de.fhhannover.inform.dhaenssg.lorodux.datastore.OptionsStore;
 
 public class OptionsDirectionView extends View {
 
+    // Definition of commands
     private final transient Command OK = new Command("OK", Command.OK, 0);
     private final transient Command BACK = new Command("Zurück", Command.BACK, 1);
 
@@ -43,8 +43,8 @@ public class OptionsDirectionView extends View {
     private final transient OptionsView mOptionsView;
 
     /**
-     * Konstruktor
-     * @param OptionsView-Objekt, zu dem zurückgekehrt werden soll
+     * Constructor
+     * @param Options view, to which to return, when done
      */
     public OptionsDirectionView(final OptionsView optionsView) {
 	mOptionsView = optionsView;
@@ -70,6 +70,7 @@ public class OptionsDirectionView extends View {
 	Display.getDisplay(LoroDux.getInstance()).setCurrent(mList);
     }
 
+    // Handle commands
     public void commandAction(final Command c, final Displayable d) {
 	if (c == OK || c == List.SELECT_COMMAND) {
 	    OptionsStore.chosenDirectionString = mList.getSelectedIndex();

@@ -16,15 +16,11 @@
  */
 
 /**
- * Diese Klasse gehört zur LoroDux MIDlet Suite.
- * Sie stellt die Informationen eines Node-Objektes dar.
+ * This class is part of the LoroDux midlet suite
+ * Show a node in detail
  * 
  * @author Daniel Hänßgen
  * 
- * 09.05.2010 - Erste Implementierung
- * 09.05.2010 - NodeView um Vibration erweitert.
- * 16.05.2010 - Nodes um Description und Adress erweitert
- * 22.05.2010 - Darstellung aufgeräumt
  */
 
 package de.fhhannover.inform.dhaenssg.lorodux.view;
@@ -45,6 +41,7 @@ import de.fhhannover.inform.dhaenssg.lorodux.util.GpsCalc;
 
 public class NodeView extends View {
 
+    // Handle commands
     private final transient Command REFRESH = new Command("aktualisieren",
 	    Command.OK, 0);
     private final transient Command BACK = new Command("zurück", Command.BACK,
@@ -71,8 +68,8 @@ public class NodeView extends View {
     }
 
     /**
-     * Aktualisiert Darstellung.
-     * Berechnet Distanz und Kurs neu.
+     * Refresh info
+     * Recalc distance and heading
      */
     private void refresh() {
 	mList.deleteAll();
@@ -119,6 +116,7 @@ public class NodeView extends View {
 	Display.getDisplay(LoroDux.getInstance()).setCurrent(mList);
     }
 
+    // Handle commands
     public void commandAction(final Command c, final Displayable d) {
 	if (c == REFRESH) {
 	    final int index = mList.getSelectedIndex();

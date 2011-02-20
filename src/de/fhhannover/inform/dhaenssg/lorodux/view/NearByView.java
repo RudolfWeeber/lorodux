@@ -16,12 +16,10 @@
  */
 
 /**
- * Diese Klasse gehört zur LoroDux MIDlet Suite.
- * Sie dient der Darstellung der Umliegenden Punkte.
+ * This class is part of the LoroDux Midlet suite.
+ * Shows nearby map nodes
  * 
  * @author Daniel Hänßgen
- * Version: 0.1
- * Datum 05.05.2010 -> Implementierung
  */
 
 package de.fhhannover.inform.dhaenssg.lorodux.view;
@@ -43,6 +41,7 @@ import de.fhhannover.inform.dhaenssg.lorodux.util.GeoDirection;
 
 public class NearByView extends View {
 
+    // Definition of commands
     private final transient Command REFRESH = new Command("aktualisieren",
 	    Command.OK, 0);
     private final transient Command BACK = new Command("zurück", Command.BACK,
@@ -54,6 +53,7 @@ public class NearByView extends View {
     private transient int mDirection = -1;
     private transient Vector mItems;
 
+    // List containing the map nodes to show
     private final transient List mList;
 
     public NearByView() {
@@ -72,7 +72,7 @@ public class NearByView extends View {
     }
 
     /**
-     * Aktualisiert komplette Darstellung. Berechnet Distanz und Richtung neu.
+     * Refresh list. Recalc distnaces and directions
      */
     public void refresh() {
 	mList.deleteAll();
@@ -119,8 +119,8 @@ public class NearByView extends View {
     }
 
     /**
-     * Holt sich die aktuellen Positionsdaten vom GPS-Empfänger schreibt diese
-     * auf den InputView und zeigt diesen dann an.
+     * Adds a list entry as favorites. Creates an appropriate entry view
+     * with coordinates fromj the node
      */
     private void addAsFavorite(final int i) {
 	final Node node = (Node) mItems.elementAt(i);
@@ -130,6 +130,7 @@ public class NearByView extends View {
 	inputView.show();
     }
 
+    // Handle commands
     public void commandAction(final Command c, final Displayable arg1) {
 	if (c == BACK) {
 	    LoroDux.showView(LoroDux.MAINVIEW);

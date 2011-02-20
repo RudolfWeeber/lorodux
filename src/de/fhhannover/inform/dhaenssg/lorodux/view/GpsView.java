@@ -16,15 +16,10 @@
  */
 
 /**
- * Diese Klasse gehört zur LodoDux MIDlet Suite.
- * Sie dient der Darstellung der aktuellen Daten, die vom GPS-Empfänger kommen.
+ * This class is part of the LoroDux midlet suite
+ * It shows current gps measurements
  * 
  * @author Daniel Hänßgen
- * Version: 0.1
- * März 2010 - Erste Implementierung mit StringItems
- * 11.04.2010 - Aus EXIT - BACK to MainView gemacht.
- * 14.04.2010 - Implementierung der StringItems in TextBox gewandelt
- * 		-> Nur so Screenreader tauglich
  */
 
 package de.fhhannover.inform.dhaenssg.lorodux.view;
@@ -40,11 +35,13 @@ import de.fhhannover.inform.dhaenssg.lorodux.entity.Position;
 
 public class GpsView extends View {
 
+    // Declare commands
     private final transient Command REFRESH = new Command("Aktualisieren",
 	    Command.OK, 0);
     private final transient Command BACK = new Command("zurück", Command.BACK,
 	    1);
 
+    // Each list entry contains one peace of info (lat, long, etc.)
     private final transient List mList;
 
     public GpsView() {
@@ -55,11 +52,9 @@ public class GpsView extends View {
     }
 
     /**
-     * Parst das übergebene Position-Objekt und schreibt die Daten auf die
-     * Liste. Vorher wird dieser alle Einträge entfernt.
-     * 
+     * Parse the given position object and fill out the list accordingly
      * @param Position
-     *            , die auf dem Display angezeigt werden soll.
+     *            , which should be displayed
      */
     public void set(final Position pos) {
 	try {
@@ -82,6 +77,7 @@ public class GpsView extends View {
 	Display.getDisplay(LoroDux.getInstance()).setCurrent(mList);
     }
 
+    // Handle commands
     public void commandAction(final Command c, final Displayable arg1) {
 	if (c == REFRESH) {
 	    final int item = mList.getSelectedIndex();
