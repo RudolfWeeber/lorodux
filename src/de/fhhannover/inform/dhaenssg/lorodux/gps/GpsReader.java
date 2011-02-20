@@ -22,4 +22,5 @@ package de.fhhannover.inform.dhaenssg.lorodux.gps;
 public interface GpsReader {
 	public void discoverGPS();
 	public void shutdown();
+	public void resetToCleanStatus();
 }

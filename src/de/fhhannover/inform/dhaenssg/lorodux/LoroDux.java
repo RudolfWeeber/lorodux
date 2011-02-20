@@ -16,19 +16,13 @@
  */
 
 /**
- * LoroDux - Navigationssystem für Blinde
+ * LoroDux - Navigationssystem for the blind
  * 
  * @author Daniel Hänßgen
  * 
- * Dies ist das MIDlet.
- * Von hier wird die Anwenund gestartet.
+ * This is the midlet.
+ * Entry point for the application
  * 
- * Datum: 26.03.2010
- * 
- * 26.03.2010 - Implementierung von Views
- * 11.04.2010 - Erweiterung Command um FavoriteView
- * 05.05.2010 - NearByView hinzugefügt
- * 16.05.2010 - WhereAmIView hinzugefügt
  **/
 
 package de.fhhannover.inform.dhaenssg.lorodux;
@@ -44,7 +38,9 @@ import javax.microedition.rms.RecordStoreNotFoundException;
 
 import de.fhhannover.inform.dhaenssg.lorodux.datastore.FavoriteStore;
 import de.fhhannover.inform.dhaenssg.lorodux.datastore.OptionsStore;
+import de.fhhannover.inform.dhaenssg.lorodux.gps.GpsReader;
 import de.fhhannover.inform.dhaenssg.lorodux.gps.BluetoothGpsReader;
+import de.fhhannover.inform.dhaenssg.lorodux.gps.IntegratedGpsReader;
 import de.fhhannover.inform.dhaenssg.lorodux.osm.NodeManager;
 import de.fhhannover.inform.dhaenssg.lorodux.osm.Tags;
 import de.fhhannover.inform.dhaenssg.lorodux.view.*;
@@ -52,7 +48,7 @@ import de.fhhannover.inform.dhaenssg.lorodux.view.*;
 public class LoroDux extends MIDlet {
 
     /**
-     * Definition von Konstanten für die Adressierung der Views.
+     * Constants to identify different views
      */
     public static final int MAINVIEW = 0;
     public static final int GPSVIEW = 1;
@@ -63,19 +59,19 @@ public class LoroDux extends MIDlet {
     public static final int OPTIONSVIEW = 6;
 
     /**
-     * Singleton-Implementierung Deklaration
+     * Singleton-implementierung declaration
      */
     private static LoroDux instance;
 
-    /**
-     * Referenz auf BluetoothGPS-Gerät
-     */
+    // GPS reciever
+    // Is a reciever connected?    
     private static boolean mBluetoothConnected;
-    private static BluetoothGpsReader reader;
+    // Reader class
+    private static GpsReader reader;
 
     /**
-     * Deklaration der Views.
-     */
+     Declaration of views
+    */
     private static MainView mMainView;
     private static GpsView mGpsView;
     private static WhereAmIView mWhereAmIView;
@@ -85,10 +81,9 @@ public class LoroDux extends MIDlet {
     private static SearchView mSearchView;
 
     /**
-     * Methode, die beim Beenden aufgerufen wird.
-     * Dient der persisten Speicherung von Favoriten und Optionen,
-     * sowie das Beenden der Verbindung zum Bluetooth-GPS-Empfänger.
-     * Zum Schluss wird das MIDlet zerstört. 
+     * At program exit:
+     * Save favorites and config
+     * Terminate connection to gps reader
      */
     public void exit() {
 	FavoriteStore.storeFavoritesToRecordStore();
@@ -130,8 +125,10 @@ public class LoroDux extends MIDlet {
     }
 
     /*
-     * (non-Javadoc)
-     * 
+     * On application start
+     * Load options and favorites
+     * Load map nodes
+     * Discover gsp reciever
      * @see javax.microedition.midlet.MIDlet#startApp()
      */
     protected void startApp() throws MIDletStateChangeException {
@@ -176,8 +173,8 @@ public class LoroDux extends MIDlet {
     }
 
     /**
-     * Konstruktor des MIDlets.
-     * Instanziiert auch alle Views.
+     * Constructor of the midlet
+     * Also instanciates the views
      */
     public LoroDux() {
 	instance = this;
@@ -192,7 +189,7 @@ public class LoroDux extends MIDlet {
     }
 
     /**
-     * Standard Methode um einfachen Text auf MainView darzustellen
+     * Method to show simple messages on main view
      * @param text
      */
     public static void displayStringOnMainView(String text) {
@@ -200,7 +197,7 @@ public class LoroDux extends MIDlet {
     }
 
     /**
-     * View auf Display anzeigen.
+     * Show a view
      * @param Integer, der View repräsentiert
      */
     public static synchronized void showView(int view) {
@@ -237,7 +234,7 @@ public class LoroDux extends MIDlet {
     }
 
     /**
-     * Methode, um das neuaufsuchen eines Bluetooth-Gerätes anzustoßen.
+     * Redisvoer gps
      */
     public static void rediscoverGpsDevice() {
 	reader.resetToCleanStatus();
@@ -245,7 +242,7 @@ public class LoroDux extends MIDlet {
     }
 
     /**
-     * Methode um Bluetooth-GPS aufzusuchen.
+     * Discover gps
      */
     public static void discoverGPS() {
 
@@ -253,14 +250,15 @@ public class LoroDux extends MIDlet {
 	 * If we haven't got an integrated GPS this will throw an Exception
 	 * quickly
 	 */
-	// try {
-	// mMainView.setText("GPS-Info", "Suche nach integriertem Empfänger");
-	// reader = new IntegratedGPSReader();
-	// }
-	// catch(Throwable t) {
-	mMainView.setText("GPS-Info", "Suche nach Bluetooth-Empfänger");
-	reader = new BluetoothGpsReader();
-	// }
+	try {
+	 mMainView.setText("GPS-Info", "Suche nach integriertem Empfänger");
+	 reader = new IntegratedGpsReader();
+	 }
+	 catch(Throwable t) {
+	  mMainView.setText("GPS-Info", "Suche nach Bluetooth-Empfänger");
+	  reader = new BluetoothGpsReader();
+         }
+
 	// reader.resetToCleanStatus();
 	reader.discoverGPS();
     }
