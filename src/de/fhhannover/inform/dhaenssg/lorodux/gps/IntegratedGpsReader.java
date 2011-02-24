@@ -16,6 +16,7 @@ import javax.microedition.location.LocationProvider;
 
 
 import de.fhhannover.inform.dhaenssg.lorodux.LoroDux;
+import de.fhhannover.inform.dhaenssg.lorodux.view.AlertManager;
 import de.fhhannover.inform.dhaenssg.lorodux.entity.Position;
 import de.fhhannover.inform.dhaenssg.lorodux.entity.ActualPosition;
 /**
@@ -42,12 +43,13 @@ public class IntegratedGpsReader implements GpsReader, LocationListener {
 		criteria.setSpeedAndCourseRequired(true);
 		criteria.setCostAllowed(true);
 		criteria.setVerticalAccuracy(100);
-		criteria.setHorizontalAccuracy(100);
-		criteria.setPreferredPowerConsumption(Criteria.POWER_USAGE_MEDIUM);
+		criteria.setHorizontalAccuracy(10);
+		criteria.setPreferredPowerConsumption(Criteria.POWER_USAGE_HIGH);
 
 
 		lp = LocationProvider.getInstance(criteria);
 		if (lp == null) {
+                        AlertManager.displayInfo("Der Ort kann nicht mit der gewuenschten Genauigkeit bestimmt werden.");
 			// Any will do, but we won't be able to use
 			// the bearing/course/speed without correct 
 			//criteria
@@ -61,6 +63,11 @@ public class IntegratedGpsReader implements GpsReader, LocationListener {
      * {@inheritDoc}
      */
     public void locationUpdated(LocationProvider lp, Location loc) {
+       // If the location given isn't valid, we don't have usable coordinates (yet) 
+       if (! loc.isValid()) {
+        return;
+       }
+       
        // Get the positino object ot update
        final Position pos = ActualPosition.getPosition();
 

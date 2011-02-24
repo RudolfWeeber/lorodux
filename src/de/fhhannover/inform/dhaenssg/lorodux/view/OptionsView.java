@@ -52,6 +52,7 @@ public class OptionsView extends View {
 	mList.append("Aktualisierungsintervall ändern", null);
 	mList.append("Zeit bis GPS Ausfall benachrichtigt wird", null);
 	mList.append("Angabe der Richtungen", null);
+	mList.append("Internes / externes Gps umschalten", null);
 
 	mList.addCommand(BACK);
 	mList.setCommandListener(this);
@@ -122,6 +123,16 @@ public class OptionsView extends View {
 
 	    case 4:
 		new OptionsDirectionView(this);
+		break;
+	    case 5:
+		if (OptionsStore.internalGps) {
+		    OptionsStore.internalGps = false;
+		    AlertManager.displayInfo("Bluetooth Gps. Starten Sie LoroDux erneut, damit dies wirksam wird.");
+		} else {
+		    OptionsStore.internalGps = true;
+		    AlertManager.displayInfo("Internes Gps aktiviert. Starten Sie LoroDux erneut, damit dies wirksam wird. Durch die Nutzung des Internen Gps koennen auf manchen Telefonen Internetkosten entstehen.");
+		    Display.getDisplay(LoroDux.getInstance()).vibrate(50);
+		}
 		break;
 
 	    default:

@@ -246,18 +246,22 @@ public class LoroDux extends MIDlet {
      */
     public static void discoverGPS() {
 
-	/*
-	 * If we haven't got an integrated GPS this will throw an Exception
-	 * quickly
-	 */
-	try {
-	 mMainView.setText("GPS-Info", "Suche nach integriertem Empfänger");
-	 reader = new IntegratedGpsReader();
+	// Chose internal/external gsp reciever according to options
+	if (OptionsStore.internalGps) {
+	 try {
+	  mMainView.setText("GPS-Info", "Suche nach integriertem Empfänger");
+	  reader = new IntegratedGpsReader();
+	  }
+	  catch(Throwable t) {
+	   mMainView.setText("GPS-Info", "Kein internes Gps vorhanden. Suche nach Bluetooth-Empfänger");
+	   reader = new BluetoothGpsReader();
+          }
 	 }
-	 catch(Throwable t) {
-	  mMainView.setText("GPS-Info", "Suche nach Bluetooth-Empfänger");
-	  reader = new BluetoothGpsReader();
-         }
+	 else
+	 {
+	   mMainView.setText("GPS-Info", "Suche nach Bluetooth-Empfänger");
+	   reader = new BluetoothGpsReader();
+	}
 
 	// reader.resetToCleanStatus();
 	reader.discoverGPS();

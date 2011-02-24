@@ -53,6 +53,7 @@ public class OptionsStore {
     public static int timeAutoRefresh = 5000;
     public static int timeGpsLostAllowed = 10000; 
     public static int chosenDirectionString = 0;
+    public static boolean internalGps  = false;
 
     /**
      * Methode, die den Optionen-Vector in den RecordStore speichert.
@@ -75,6 +76,7 @@ public class OptionsStore {
 	    dos.writeInt(timeAutoRefresh);
 	    dos.writeInt(timeGpsLostAllowed);
 	    dos.writeInt(chosenDirectionString);
+	    dos.writeBoolean(internalGps);
 
 	    byte[] byteData = baos.toByteArray();
 	    dos.close();
@@ -119,6 +121,8 @@ public class OptionsStore {
 	    timeAutoRefresh = dis.readInt();
 	    timeGpsLostAllowed = dis.readInt();
 	    chosenDirectionString = dis.readInt();
+	    internalGps = dis.readBoolean();
+
 	    
 	    rs.closeRecordStore();
 	} catch (RecordStoreFullException e) {
