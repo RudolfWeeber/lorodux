@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -19,7 +19,7 @@
  * This class is part of the LoroDux midlet suite
  * Shows details of a favorite, distance to current location and absolute
  * direction
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  * 
  */
 
@@ -41,7 +41,7 @@ import de.fhhannover.inform.dhaenssg.lorodux.util.GpsCalc;
 public class FavoriteShowView extends View {
 
     // Declaration of commands
-    private final transient Command BACK = new Command("zur¸ck", Command.BACK,
+    private final transient Command BACK = new Command("zur√ºck", Command.BACK,
 	    1);
     private final transient Command REFRESH = new Command("aktualisieren",
 	    Command.OK, 0);
@@ -92,13 +92,13 @@ public class FavoriteShowView extends View {
 	mList.append(GeoDirection.getChosenDirectionString(bearing), null);
 	mList.append(mFav.getName(), null);
 	mList.append("Breitengrad " + mFav.getLat(), null);
-	mList.append("L‰ngengrad " + mFav.getLon(), null);
+	mList.append("L√§ngengrad " + mFav.getLon(), null);
 
 	if (OptionsStore.vibrate) {
 	    try {
 		GeoDirection.vibrate(course);
 	    } catch (InterruptedException e) {
-		/* Was soll man schon machen, wenn das vibrieren fehlschl‰gt?! */
+		/* Was soll man schon machen, wenn das vibrieren fehlschl√§gt?! */
 	    }
 	}
 

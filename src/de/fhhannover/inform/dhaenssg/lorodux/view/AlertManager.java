@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 

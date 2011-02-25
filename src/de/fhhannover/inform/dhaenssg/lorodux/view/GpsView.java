@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -19,7 +19,7 @@
  * This class is part of the LoroDux midlet suite
  * It shows current gps measurements
  * 
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  */
 
 package de.fhhannover.inform.dhaenssg.lorodux.view;
@@ -38,7 +38,7 @@ public class GpsView extends View {
     // Declare commands
     private final transient Command REFRESH = new Command("Aktualisieren",
 	    Command.OK, 0);
-    private final transient Command BACK = new Command("zur¸ck", Command.BACK,
+    private final transient Command BACK = new Command("zur√ºck", Command.BACK,
 	    1);
 
     // Each list entry contains one peace of info (lat, long, etc.)
@@ -63,7 +63,7 @@ public class GpsView extends View {
 	    mList.append("HDOP " + pos.getHDOP(), null);
 	    mList.append(pos.getDateAsString(), null);
 	    mList.append("Breitengrad " + pos.getLat(), null);
-	    mList.append("L‰ngengrad " + pos.getLon(), null);
+	    mList.append("L√§ngengrad " + pos.getLon(), null);
 	    mList.append("Richtung " + pos.getHeading() + " Grad", null);
 	    mList.append(pos.getSpeed() + " kilometer pro stunde", null);
 

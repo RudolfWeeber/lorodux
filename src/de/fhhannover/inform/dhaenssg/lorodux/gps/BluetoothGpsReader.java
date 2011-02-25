@@ -1,5 +1,5 @@
 /* LocateMe
- * Copyright © 2009 Silent Software (Benjamin Brown)
+ * Copyright Â© 2009 Silent Software (Benjamin Brown)
  * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Common Public License v1.0
@@ -9,10 +9,10 @@
  */
 
 /**
- * Diese Klasse gehört zur LoroDux MIDlet Suite.
+ * Diese Klasse gehÃ¶rt zur LoroDux MIDlet Suite.
  * 
  * Adaptiert und angepasst im Original von Benjamin Brown.
- * Änderungen durch die Verwendung der deutschen Sprache und
+ * Ã„nderungen durch die Verwendung der deutschen Sprache und
  * durch die Verwendung von LoroDux-Klassen kenntlich gemacht.
  * Datum: 30.03.2010
  */
@@ -123,11 +123,11 @@ public class BluetoothGpsReader implements GpsReader, DiscoveryListener {
 	    if (deviceName.trim().length() != 0) {
 		rds.addElement(rd);
 		rdNames.addElement(deviceName);
-		AlertManager.displayInfo("Gerät gefunden " + deviceName);
+		AlertManager.displayInfo("GerÃ¤t gefunden " + deviceName);
 	    }
 	} catch (Exception io) {
 	    // Failed discovering one device - not worthy of an alert
-	    // LoroDux.showInfo("Gerät nicht gefunden", io.getMessage());
+	    // LoroDux.showInfo("GerÃ¤t nicht gefunden", io.getMessage());
 	}
     }
 
@@ -141,12 +141,12 @@ public class BluetoothGpsReader implements GpsReader, DiscoveryListener {
 	if (discType != INQUIRY_COMPLETED)
 	    return;
 	if (rds.size() == 0) {
-	    AlertManager.displayError("Fehler", "Kein GPS-Gerät gefunden");
+	    AlertManager.displayError("Fehler", "Kein GPS-GerÃ¤t gefunden");
 	    resetToCleanStatus();
 	    return;
 	}
 	String lastDeviceName = getLastDeviceName();
-	// LoroDux.showInfo("Geräte gefunden", "Anzahl "+rds.size());
+	// LoroDux.showInfo("GerÃ¤te gefunden", "Anzahl "+rds.size());
 	if (lastDeviceName != null && lastDeviceName.trim().length() > 0) {
 	    // LoroDux.showInfo("GPS-Info", "Zuletzt benutzt: " +
 	    // lastDeviceName);
@@ -155,7 +155,7 @@ public class BluetoothGpsReader implements GpsReader, DiscoveryListener {
 	    selectDevice(lastDeviceName);
 	} else {
 	    // try{LoroDux.showInfo("GPS-Info",
-	    // "Kein zuletzt benutztes Geräte gefunden");}catch(Exception e){}
+	    // "Kein zuletzt benutztes GerÃ¤te gefunden");}catch(Exception e){}
 	    listView.displayList(rdNames);
 	}
     }
@@ -201,7 +201,7 @@ public class BluetoothGpsReader implements GpsReader, DiscoveryListener {
 	    Config.setProperty(Config.GPS_DEVICE_NAME_INDEX, "");
 	} catch (Exception e) {
 	    AlertManager.displayError("GPS-Error",
-		    "Konnte ungültiges Gerät nicht löschen");
+		    "Konnte ungÃ¼ltiges GerÃ¤t nicht lÃ¶schen");
 	}
     }
 
@@ -257,7 +257,7 @@ public class BluetoothGpsReader implements GpsReader, DiscoveryListener {
 		}
 	    }
 	    AlertManager.displayError("Bluetooth-Error",
-		    "Konnte zuletzt benutztes Gerät nicht finden");
+		    "Konnte zuletzt benutztes GerÃ¤t nicht finden");
 	    // LocateMe.showAlert("Unable to find last used device");
 	    resetToCleanStatus();
 	} catch (Exception e) {
@@ -275,7 +275,7 @@ public class BluetoothGpsReader implements GpsReader, DiscoveryListener {
 		    .setProperty(Config.GPS_DEVICE_NAME_INDEX,
 			    selectedDeviceName);
 	} catch (Exception e) {
-	    AlertManager.displayError("Schwerer Fehler", "Konnte letztes GPS Gerät nicht speichern");
+	    AlertManager.displayError("Schwerer Fehler", "Konnte letztes GPS GerÃ¤t nicht speichern");
 	    // LocateMe.pushDataToView("Unable to open config db");
 	}
     }
@@ -309,12 +309,12 @@ public class BluetoothGpsReader implements GpsReader, DiscoveryListener {
 	    }
 	    StringBuffer buf = new StringBuffer();
 	    char data;
-	    AlertManager.displayInfo("Warten auf gültigen GPS Empfang");
-	    new CheckGps(); /* Änderung durch dhaenssg */
+	    AlertManager.displayInfo("Warten auf gÃ¼ltigen GPS Empfang");
+	    new CheckGps(); /* Ã„nderung durch dhaenssg */
 	    while ((data = (char) ir.read()) != 1 && shutdown != true) {
 		if ('$' == data) {
 		    try {
-			NMEAParser.process(buf.toString()); /* Änderung durch dhaenssg*/
+			NMEAParser.process(buf.toString()); /* Ã„nderung durch dhaenssg*/
 			Thread.sleep(READ_SLEEP);
 		    } catch (Exception e) {
 			LoroDux.displayStringOnMainView("readData: "
@@ -369,7 +369,7 @@ public class BluetoothGpsReader implements GpsReader, DiscoveryListener {
 	    }
 	} catch (BluetoothStateException bse) {
 	    // LoroDux.showError("Bluetooth-Error",
-	    // "Unfähig ein Bluetooth-Gerät zu benutzen");
+	    // "UnfÃ¤hig ein Bluetooth-GerÃ¤t zu benutzen");
 	    // LocateMe.showAlert("Unable to use a bluetooth device");
 	    LoroDux.displayStringOnMainView("BSE: " + bse.getMessage());
 	    // LocateMe.pushDataToView("BSE: "+bse.getMessage());

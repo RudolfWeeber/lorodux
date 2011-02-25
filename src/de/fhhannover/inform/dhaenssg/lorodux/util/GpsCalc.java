@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -22,7 +22,7 @@
  * calcDistance adaptiert von
  * http://www.codeguru.com/cpp/cpp/algorithms/general/article.php/c5115
  * 
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  * 
  * Version: 0.1
  * 05.04.2010 - Implementierung der Berechnung der Distanz anhand der
@@ -31,9 +31,9 @@
  * Version: 0.2
  * 11.04.2010 -> MathSupport von sun eingebunden
  * 				Implementierung der Berechnung der Richtung.
- * 12.04.2010 -> Coordinates entfernt und double lat lon eingef¸hrt
+ * 12.04.2010 -> Coordinates entfernt und double lat lon eingef√ºhrt
  * Version: 0.3
- * 05.05.2010 -> calcDistance gibt int zur¸ck.
+ * 05.05.2010 -> calcDistance gibt int zur√ºck.
  * 	
  */
 
@@ -171,11 +171,11 @@ public class GpsCalc {
      * @param lat1
      *            Breitengrad des ersten Punkts
      * @param lon1
-     *            L‰ngengrad des ersten Punkts
+     *            L√§ngengrad des ersten Punkts
      * @param lat2
      *            Breitengrad des zweiten Punkts
      * @param lon2
-     *            L‰ngengrad des zweiten Punkts
+     *            L√§ngengrad des zweiten Punkts
      * 
      * @return the course (direction) in degrees
      */

@@ -2,10 +2,10 @@
 
 /**
  * Diese Klasse ist Teil der LoroDux MIDlet Suite.
- * Sie ist von libOSM portiert, sodass sie auf J2ME l‰uft.
+ * Sie ist von libOSM portiert, sodass sie auf J2ME l√§uft.
  * Unbenutzte Methoden auskommentiert.
  * 
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  * Datum: 05.05.2010
  */
 package de.fhhannover.inform.dhaenssg.lorodux.osm;
@@ -67,8 +67,8 @@ public class Bounds {
 //    }
 
     /**
-     * @author Daniel H‰nﬂgen
-     * Datum 05.05.2010 - Parameter ge‰ndert
+     * @author Daniel H√§n√ügen
+     * Datum 05.05.2010 - Parameter ge√§ndert
      */
     public Bounds(final float latCenter, final float lonCenter, final float pRadius) {
         this(latCenter - pRadius, lonCenter - pRadius,

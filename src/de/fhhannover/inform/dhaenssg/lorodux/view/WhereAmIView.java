@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -16,10 +16,10 @@
  */
 
 /**
- * Diese Klasse gehˆrt zur LoroDux MIDlet Suite.
- * Sie stellt die Adress- und Place-Node in der N‰he dar. 
+ * Diese Klasse geh√∂rt zur LoroDux MIDlet Suite.
+ * Sie stellt die Adress- und Place-Node in der N√§he dar. 
  * 
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  */
 
 package de.fhhannover.inform.dhaenssg.lorodux.view;
@@ -39,7 +39,7 @@ import de.fhhannover.inform.dhaenssg.lorodux.util.GeoDirection;
 public class WhereAmIView extends View {
     
     private final transient Command REFRESH = new Command("aktualisieren", Command.OK, 0);
-    private final transient Command BACK = new Command("zur¸ck", Command.BACK, 1);
+    private final transient Command BACK = new Command("zur√ºck", Command.BACK, 1);
     
     private final transient List mList;
     

@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -18,7 +18,7 @@
 /**
  * LoroDux - Navigationssystem for the blind
  * 
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  * 
  * This is the midlet.
  * Entry point for the application
@@ -198,7 +198,7 @@ public class LoroDux extends MIDlet {
 
     /**
      * Show a view
-     * @param Integer, der View repr‰sentiert
+     * @param Integer, der View repr√§sentiert
      */
     public static synchronized void showView(int view) {
 	switch (view) {
@@ -249,17 +249,17 @@ public class LoroDux extends MIDlet {
 	// Chose internal/external gsp reciever according to options
 	if (OptionsStore.internalGps) {
 	 try {
-	  mMainView.setText("GPS-Info", "Suche nach integriertem Empf‰nger");
+	  mMainView.setText("GPS-Info", "Suche nach integriertem Empf√§nger");
 	  reader = new IntegratedGpsReader();
 	  }
 	  catch(Throwable t) {
-	   mMainView.setText("GPS-Info", "Kein internes Gps vorhanden. Suche nach Bluetooth-Empf‰nger");
+	   mMainView.setText("GPS-Info", "Kein internes Gps vorhanden. Suche nach Bluetooth-Empf√§nger");
 	   reader = new BluetoothGpsReader();
           }
 	 }
 	 else
 	 {
-	   mMainView.setText("GPS-Info", "Suche nach Bluetooth-Empf‰nger");
+	   mMainView.setText("GPS-Info", "Suche nach Bluetooth-Empf√§nger");
 	   reader = new BluetoothGpsReader();
 	}
 

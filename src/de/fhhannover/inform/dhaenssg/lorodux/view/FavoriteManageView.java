@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -19,7 +19,7 @@
  * FavoriteManageView is part of the LoroDux midlet suite
  *Used for showing and editing favorites
  * 
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  */
 
 package de.fhhannover.inform.dhaenssg.lorodux.view;
@@ -40,7 +40,7 @@ import de.fhhannover.inform.dhaenssg.lorodux.entity.Position;
 public class FavoriteManageView extends View {
 
     // Declaration of commands
-    private final transient Command ADDFAV = new Command("Favorit hinzuf¸gen",
+    private final transient Command ADDFAV = new Command("Favorit hinzuf√ºgen",
 	    Command.SCREEN, 0);
     private final transient Command REMFAV = new Command("Favorit entfernen",
 	    Command.SCREEN, 0);
@@ -48,7 +48,7 @@ public class FavoriteManageView extends View {
 	    Command.SCREEN, 0);
     private final transient Command ADDPOS = new Command(
 	    "Aktuelle Position als Favorit speichern", Command.SCREEN, 0);
-    private final transient Command BACK = new Command("zur¸ck", Command.BACK,
+    private final transient Command BACK = new Command("zur√ºck", Command.BACK,
 	    1);
 
     private final transient List mList;

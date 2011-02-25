@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -16,18 +16,18 @@
  */
 
 /**
- * Position beinhaltet Calendern wie L‰ngen und Breitengrad, sowie Richtung etc.
+ * Position beinhaltet Calendern wie L√§ngen und Breitengrad, sowie Richtung etc.
  * 
  * Methoden zum setzen der Attribute direkt, sowie "AsString" Methoden, um
- * Daten direkt irgendwo darstellen zu kˆnnen.
+ * Daten direkt irgendwo darstellen zu k√∂nnen.
  * 
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  * 
  * Version 0.1
  * 01.04.2010	Erste Implementierung - long,lat,heading,date,speed
  * Version 0.2
  * 12.04.2010	Coordinates durch zwei double Werte ersetzt.
- * 				copy()-Methode eingef¸hrt
+ * 				copy()-Methode eingef√ºhrt
  * Version 0.3
  * 10.05.2010 Anzahl Steliiten und HDOP wird gespeichert.
  */
@@ -68,7 +68,7 @@ public class Position {
 
     /**
      * Methode baut neues Position-Objekt,
-     * kopiert die Attribute und gibt dieses zur¸ck.
+     * kopiert die Attribute und gibt dieses zur√ºck.
      * @return kopie des aktuellen Positions-Objekts.
      */
     public Position copy() {
@@ -119,7 +119,7 @@ public class Position {
     }
 
     public String getCoordinatesAsString() {
-	return "Breitengrad: " + mLat + " \nL‰ngengrad: " + mLon;
+	return "Breitengrad: " + mLat + " \nL√§ngengrad: " + mLon;
     }
 
     public void setCoordinates(float lat, float lon) {

@@ -2,10 +2,10 @@
 
 /**
  * Diese Klasse ist Teil der LoroDux MIDlet Suite.
- * Sie wurde angepasst, sodass sie auf J2ME l‰uft.
+ * Sie wurde angepasst, sodass sie auf J2ME l√§uft.
  * double in float umgewandelt, parameter finalisiert.
  * 
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  * Datum 05.05.2010
  */
 

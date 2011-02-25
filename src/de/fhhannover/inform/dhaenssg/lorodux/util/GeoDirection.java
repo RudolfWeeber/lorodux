@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -20,8 +20,8 @@
  *
  * Dient der Umwandlung von Bearing in verschiedene Darstellungs-Optionen.
  * 
- * @author Daniel H‰nﬂgen
- * 22.05.2010 mˆglichkeit der Internationalisierung eingebaut.
+ * @author Daniel H√§n√ügen
+ * 22.05.2010 m√∂glichkeit der Internationalisierung eingebaut.
  */
 
 package de.fhhannover.inform.dhaenssg.lorodux.util;
@@ -36,11 +36,11 @@ public class GeoDirection {
 
     /**
      * Deklaration der Richtungsangaben.
-     * Kann sp‰ter durch andere Sprachen dynamisch ersetzt werden.
+     * Kann sp√§ter durch andere Sprachen dynamisch ersetzt werden.
      */
     private static final String N = "Nord ";
     private static final String O = "Ost ";
-    private static final String S = "S¸d ";
+    private static final String S = "S√ºd ";
     private static final String W = "West ";
 
     /**
@@ -131,8 +131,8 @@ public class GeoDirection {
     }
 
     /**
-     * Abh‰ngig von den eingestellten Optionen gibt diese Methode
-     * die passende Richtungsangabe zur¸ck.
+     * Abh√§ngig von den eingestellten Optionen gibt diese Methode
+     * die passende Richtungsangabe zur√ºck.
      * @param bearing
      * @return Richtungs-String
      */
@@ -165,7 +165,7 @@ public class GeoDirection {
     }
 
     /**
-     * Abh‰ngig vom Kurs l‰sst diese Methode das Handy vibrieren.
+     * Abh√§ngig vom Kurs l√§sst diese Methode das Handy vibrieren.
      * @param course
      * @throws InterruptedException
      */

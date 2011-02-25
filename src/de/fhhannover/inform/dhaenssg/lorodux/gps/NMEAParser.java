@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel Hänßgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel HÃ¤nÃŸgen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -16,10 +16,10 @@
  */
 
 /**
- * Diese Klasse geghört zur LoroDux MIDlet Suite.
- * Klasse zum Parsen von NMEA-Datenströmen
+ * Diese Klasse geghÃ¶rt zur LoroDux MIDlet Suite.
+ * Klasse zum Parsen von NMEA-DatenstrÃ¶men
  * 
- * @author Daniel Hänßgen
+ * @author Daniel HÃ¤nÃŸgen
  * Version: 0.1
  * 01.04.2010 - Implementierung
  * Version: 0.2
@@ -53,7 +53,7 @@ public class NMEAParser {
 		if (s[2].equalsIgnoreCase("A")) {
 		    isConnected = true;
 		    pos.setStatus(isConnected);
-		    // throw new Exception("Keine gültigen GPS Daten");
+		    // throw new Exception("Keine gÃ¼ltigen GPS Daten");
 		} else {
 		    isConnected = false;
 		    pos.setStatus(isConnected);
@@ -81,9 +81,9 @@ public class NMEAParser {
 			GpsDataUtils.convertToDegree(s[5], s[6]));
 
 		/*
-		 * Wenn zum ersten Mal gültige GPS Daten vorhanden sind wird
+		 * Wenn zum ersten Mal gÃ¼ltige GPS Daten vorhanden sind wird
 		 * diese Information auf dem MainView ausgegeben, aber nur ein
-		 * einziges Mal. Dafür sorgt das Attribut isConnected.
+		 * einziges Mal. DafÃ¼r sorgt das Attribut isConnected.
 		 */
 //		if (!isConnected) {
 //		    LoroDux.displayStringOnMainView("GPS bereit");

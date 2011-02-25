@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -16,7 +16,7 @@
  */
 
 /**
- * Diese Klasse gehˆrt zur LoroDux MIDlet Suite.
+ * Diese Klasse geh√∂rt zur LoroDux MIDlet Suite.
  * Sie dient der Darstellung der Suchergebnisse.
  * 
  * 22.05.2010 - Erste Implementierung
@@ -43,7 +43,7 @@ import de.fhhannover.inform.dhaenssg.lorodux.util.GeoDirection;
 public class SearchView extends View {
 
     private final transient Command SEARCH = new Command("Eingabe", Command.ITEM, 0);
-    private final transient Command BACK = new Command("Zur¸ck", Command.BACK, 1);
+    private final transient Command BACK = new Command("Zur√ºck", Command.BACK, 1);
 
     private final transient List mList;
     private transient Vector mItems;
@@ -61,8 +61,8 @@ public class SearchView extends View {
 
     /**
      * Wir von SimpleInputView aufgerufen, wenn dort eine
-     * Eingabe get‰tigt wurde.
-     * Abh‰ngig, welcher Listeneintrag vorher ausgew‰hlt war,
+     * Eingabe get√§tigt wurde.
+     * Abh√§ngig, welcher Listeneintrag vorher ausgew√§hlt war,
      * wird der String anders behandelt.
      */
     protected void setSimpleData(final String data) {

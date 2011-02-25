@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -54,8 +54,8 @@ public class BluetoothListView implements CommandListener {
      */
     public void displayList(Vector items) {
 	mList = null;
-	mList = new List("Ger‰te gefunden", List.IMPLICIT);
-	mList.setTitle("Bluetooth Ger‰te");
+	mList = new List("Ger√§te gefunden", List.IMPLICIT);
+	mList.setTitle("Bluetooth Ger√§te");
 
 	for (int i = 0; i < items.size(); i++) {
 	    mList.append((String) items.elementAt(i), null);
@@ -72,7 +72,7 @@ public class BluetoothListView implements CommandListener {
 	if (c == List.SELECT_COMMAND) {
 	    int index = mList.getSelectedIndex();
 	    mReader.selectDevice(index, mList.getString(index));
-	    LoroDux.displayStringOnMainView("Bluetooth-GPS-Ger‰t ausgew‰hlt");
+	    LoroDux.displayStringOnMainView("Bluetooth-GPS-Ger√§t ausgew√§hlt");
 	}
     }
 }

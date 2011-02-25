@@ -1,5 +1,5 @@
 /*
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -19,7 +19,7 @@
  * Zeigt die Lizenzvereinbarung an.
  * Diese muss akzeptiert werden, sonst wird das Programm beendet.
  * 
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  * 
  * Version: 0.1
  * 

@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -16,11 +16,11 @@
  */
 
 /**
- * Diese Klasse gehˆrt zur LoroDux MIDlet Suite.
- * Sie dient der permanenten Speicherung der im Optionen-Men¸
+ * Diese Klasse geh√∂rt zur LoroDux MIDlet Suite.
+ * Sie dient der permanenten Speicherung der im Optionen-Men√º
  * eingestellten Daten. 
  * 
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  * 
  * 09.05.2010 - Erste Implementierung
  * 11.05.2010 - um GPSLostAllowed erweitert

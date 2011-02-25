@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -19,7 +19,7 @@
  * This class belongs to the LoroDux Midlet Suite
  * Allows for setting the way, directions are spoken
  * 
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  */
 
 package de.fhhannover.inform.dhaenssg.lorodux.view;
@@ -36,7 +36,7 @@ public class OptionsDirectionView extends View {
 
     // Definition of commands
     private final transient Command OK = new Command("OK", Command.OK, 0);
-    private final transient Command BACK = new Command("Zur¸ck", Command.BACK, 1);
+    private final transient Command BACK = new Command("Zur√ºck", Command.BACK, 1);
 
     private final transient List mList;
 

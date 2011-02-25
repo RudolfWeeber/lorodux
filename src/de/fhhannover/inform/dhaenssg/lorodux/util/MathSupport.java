@@ -35,8 +35,8 @@ package de.fhhannover.inform.dhaenssg.lorodux.util;
 /**
  * EDIT:
  * Alle floats in doubles umbenannt -> einfachere Handhabe der anderen Sourcen.
- * Evtl. überlegen, ob man alles in float umwandelt, falls Geschwindigkeit signifikant sinkt.
- * @author: Daniel Hänßgen
+ * Evtl. Ã¼berlegen, ob man alles in float umwandelt, falls Geschwindigkeit signifikant sinkt.
+ * @author: Daniel HÃ¤nÃŸgen
  * 07.04.2010
  */
 public final class MathSupport {

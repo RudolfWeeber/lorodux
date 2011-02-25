@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -19,7 +19,7 @@
  * This class is part of the LoroDux midlet suite
  * Displays a view for the entry of a favorite's name and coordinates
  *
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  */
 
 package de.fhhannover.inform.dhaenssg.lorodux.view;
@@ -68,7 +68,7 @@ public class FavoriteInputView extends View {
 
 	final TextField nameLabel = new TextField(null, "Name", 4, TextField.UNEDITABLE);
 	final TextField latLabel = new TextField(null, "Breitengrad", 11, TextField.UNEDITABLE);
-	final TextField lonLabel = new TextField(null, "L‰ngengrad", 10, TextField.UNEDITABLE);
+	final TextField lonLabel = new TextField(null, "L√§ngengrad", 10, TextField.UNEDITABLE);
 	
 	
 	mName = new TextField(null, "", 255, TextField.ANY);

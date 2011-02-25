@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel Hänßgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel HÃ¤nÃŸgen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -16,7 +16,7 @@
  */
 
 /**
- * Diese Klasse gehört zur LoroDux MIDlet Suite.
+ * Diese Klasse gehÃ¶rt zur LoroDux MIDlet Suite.
  * Sie dient der Verwaltung von Nodes, die aus der OSM stammen.
  * 
  * Datum: 03.05.2010
@@ -42,7 +42,7 @@ import de.fhhannover.inform.dhaenssg.lorodux.util.GpsCalc;
 public class NodeManager {
 
     /**
-     * Deklaration des Vector-Objekts, welches die Nodes hält.
+     * Deklaration des Vector-Objekts, welches die Nodes hÃ¤lt.
      */
     private static Vector mNodes = new Vector();
 
@@ -79,7 +79,7 @@ public class NodeManager {
      * @param distance
      *            Distanz in Metern, wie weit gesucht werden soll
      * @return gibt die gefundenen Nodes als Vector aufsteigend sortiert nach
-     *         Distanz zur Position zurück
+     *         Distanz zur Position zurÃ¼ck
      */
     public static Vector getNodesNearActualPosition(final int direction) {
 	final int distance = OptionsStore.radius;
@@ -92,7 +92,7 @@ public class NodeManager {
 	do {
 	    radius += 0.0005;
 	    calc = GpsCalc.calcDistance(lat, lon, lat, lon + radius);
-	    // System.out.println("Radius: " + radius + "° Calc: " + calc
+	    // System.out.println("Radius: " + radius + "Â° Calc: " + calc
 	    // + "Meter");
 	} while (distance >= calc);
 	// long duration = System.currentTimeMillis() - starttime;
@@ -172,7 +172,7 @@ public class NodeManager {
     }
 
     /**
-     * Sucht alle Nodes, die in der Beschreibung oder Adresse den übergebenen
+     * Sucht alle Nodes, die in der Beschreibung oder Adresse den Ã¼bergebenen
      * String beinhalten.
      * @param String, nach dem gesucht werden soll
      * @return Vector mit gefundenen Nodes. Geordnet aufsteigend nach Distanz
@@ -246,7 +246,7 @@ public class NodeManager {
     }
 
     /**
-     * Diese Methode sucht nach dem nächstgelegenen Adress und
+     * Diese Methode sucht nach dem nÃ¤chstgelegenen Adress und
      * Place Node, um eine "Wo bin ich?" Funktion zu realisieren.
      * @return Vector mit zwei Elementen. [0] AdressNode [1] PlaceNode
      */
@@ -270,7 +270,7 @@ public class NodeManager {
 		final Node actualNode = (Node) en.nextElement();
 		if (boundingBox.contains(actualNode.getLat(),
 			actualNode.getLon())) {
-		    if (actualNode.getTag() == 199) { // ID für die Place-Node
+		    if (actualNode.getTag() == 199) { // ID fÃ¼r die Place-Node
 			actualDist = GpsCalc.calcDistance(actualNode.getLat(),
 				actualNode.getLon(), lat, lon);
 			if (place == null) {

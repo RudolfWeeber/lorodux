@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -18,7 +18,7 @@
 /**
  * Einfache Klasse zum Speichern von Favoriten-Daten
  * 
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  * Version: 0.1
  * 07.04.2010
  * Version: 0.2

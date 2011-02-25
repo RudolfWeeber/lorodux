@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -19,7 +19,7 @@
  * This class is part of the LoroDux Midlet suite.
  * Shows nearby map nodes
  * 
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  */
 
 package de.fhhannover.inform.dhaenssg.lorodux.view;
@@ -44,10 +44,10 @@ public class NearByView extends View {
     // Definition of commands
     private final transient Command REFRESH = new Command("aktualisieren",
 	    Command.OK, 0);
-    private final transient Command BACK = new Command("zur¸ck", Command.BACK,
+    private final transient Command BACK = new Command("zur√ºck", Command.BACK,
 	    1);
     private final transient Command SETRADIUS = new Command(
-	    "Suchradius ‰ndern", Command.ITEM, 1);
+	    "Suchradius √§ndern", Command.ITEM, 1);
     private final transient Command ADDFAV = new Command(
 	    "Punkt als Favorit speichern", Command.ITEM, 1);
     private transient int mDirection = -1;

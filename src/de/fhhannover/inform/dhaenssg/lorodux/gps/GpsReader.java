@@ -1,5 +1,5 @@
 /* LocateMe
- * Copyright © 2009 Silent Software (Benjamin Brown)
+ * Copyright Â© 2009 Silent Software (Benjamin Brown)
  * 
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Common Public License v1.0
@@ -8,9 +8,9 @@
  */
 
 /**
- * Diese Klasse gehört zur LoroDux MIDlet Suite.
- * @author Daniel Hänßgen
- * Übernommen von Benjamin Brown.
+ * Diese Klasse gehÃ¶rt zur LoroDux MIDlet Suite.
+ * @author Daniel HÃ¤nÃŸgen
+ * Ãœbernommen von Benjamin Brown.
  * Package-Struktur am 14.04.2010 angepasst.
  */
 package de.fhhannover.inform.dhaenssg.lorodux.gps;

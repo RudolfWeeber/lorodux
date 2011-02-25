@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -16,10 +16,10 @@
  */
 
 /**
- * Diese Klasse gehˆrt zur LoroDux MIDlet Suite.
+ * Diese Klasse geh√∂rt zur LoroDux MIDlet Suite.
  * Sie dient der Konfiguration verschiedener Funktionen.
  * 
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  * Datum:
  * 09.05.2010
  * 07.06.2010 - Anpassung auf Grund SimpleInputView Anpassung
@@ -38,7 +38,7 @@ import de.fhhannover.inform.dhaenssg.lorodux.datastore.OptionsStore;
 
 public class OptionsView extends View {
 
-    private final transient Command BACK = new Command("zur¸ck", Command.BACK,
+    private final transient Command BACK = new Command("zur√ºck", Command.BACK,
 	    1);
 
     private final transient List mList;
@@ -48,8 +48,8 @@ public class OptionsView extends View {
 	mList = new List("Einstellungen", List.IMPLICIT);
 
 	mList.append("Vibration Ein Aus", null);
-	mList.append("Umkreisradius ‰ndern", null);
-	mList.append("Aktualisierungsintervall ‰ndern", null);
+	mList.append("Umkreisradius √§ndern", null);
+	mList.append("Aktualisierungsintervall √§ndern", null);
 	mList.append("Zeit bis GPS Ausfall benachrichtigt wird", null);
 	mList.append("Angabe der Richtungen", null);
 	mList.append("Internes / externes Gps umschalten", null);
@@ -60,8 +60,8 @@ public class OptionsView extends View {
 
     /**
      * Wird von SimpleInputView aufgerufen, wenn dort eine
-     * Eingabe get‰tigt wurde.
-     * Abh‰ngig, welcher Listeneintrag vorher ausgew‰hlt war,
+     * Eingabe get√§tigt wurde.
+     * Abh√§ngig, welcher Listeneintrag vorher ausgew√§hlt war,
      * wird der String anders behandelt.
      */
     protected void setSimpleData(final String data) {
@@ -117,7 +117,7 @@ public class OptionsView extends View {
 		break;
 
 	    case 3:
-		new SimpleInputView(this, "Verzˆgerung in Sekunden", 2,
+		new SimpleInputView(this, "Verz√∂gerung in Sekunden", 2,
 			TextField.NUMERIC);
 		break;
 

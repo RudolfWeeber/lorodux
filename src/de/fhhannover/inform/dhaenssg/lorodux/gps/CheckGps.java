@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel Hänßgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel HÃ¤nÃŸgen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -16,15 +16,15 @@
  */
 
 /**
- * Diese Klasse gehört zur LoroDux MIDlet Suite.
- * Sie überprüft periodisch, ob ein GPS Signal vorhanden ist, und gibt
+ * Diese Klasse gehÃ¶rt zur LoroDux MIDlet Suite.
+ * Sie Ã¼berprÃ¼ft periodisch, ob ein GPS Signal vorhanden ist, und gibt
  * ggf. Alerts aus.
  * 
- * @author Daniel Hänßgen
+ * @author Daniel HÃ¤nÃŸgen
  * Datum: 10.05.2010
  * 
  * Datum: 16.05.2010
- * Bugfix: unnötige Mehrfachnennung von "GPS bereit" entfernt
+ * Bugfix: unnÃ¶tige Mehrfachnennung von "GPS bereit" entfernt
  */
 
 package de.fhhannover.inform.dhaenssg.lorodux.gps;
@@ -62,7 +62,7 @@ public class CheckGps extends Thread {
 			    && timePassed >= OptionsStore.timeGpsLostAllowed
 			    && mLostSignalAlertAlreadyShown == false) {
 			AlertManager.displayError("Problem",
-				"GPS Signal nicht verfügbar");
+				"GPS Signal nicht verfÃ¼gbar");
 			mLostSignalAlertAlreadyShown = true;
 		    } else {
 			if (pos.getStatus() == true

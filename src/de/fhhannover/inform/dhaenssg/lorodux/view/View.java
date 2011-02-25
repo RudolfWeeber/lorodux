@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -16,12 +16,12 @@
  */
 
 /**
- * Diese Klasse gehˆrt zur LoroDux MIDlet Suite.
+ * Diese Klasse geh√∂rt zur LoroDux MIDlet Suite.
  * 
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  * 
  * 06.05.2010 - Erste Implementierung
- * 09.05.2010 - setSimpleData hinzugef¸gt und show sichtbarkeis-Deskriptor verpasst.
+ * 09.05.2010 - setSimpleData hinzugef√ºgt und show sichtbarkeis-Deskriptor verpasst.
  */
 
 package de.fhhannover.inform.dhaenssg.lorodux.view;
@@ -33,7 +33,7 @@ public abstract class View implements CommandListener{
     abstract void setSimpleData(String data);
     
     /**
-     * Abstrakte Methode, die die erbenden Klassen implementieren m¸ssen.
+     * Abstrakte Methode, die die erbenden Klassen implementieren m√ºssen.
      * Sie dient der Darstellung des in der View-Klasse enthaltenen Displayable-Objekts  
      */
     abstract public void show();

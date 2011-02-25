@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -19,7 +19,7 @@
  * This class is part of the LoroDux midlet suite
  * Show a node in detail
  * 
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  * 
  */
 
@@ -44,7 +44,7 @@ public class NodeView extends View {
     // Handle commands
     private final transient Command REFRESH = new Command("aktualisieren",
 	    Command.OK, 0);
-    private final transient Command BACK = new Command("zur¸ck", Command.BACK,
+    private final transient Command BACK = new Command("zur√ºck", Command.BACK,
 	    1);
 
     private final transient List mList;
@@ -98,7 +98,7 @@ public class NodeView extends View {
 	if (!mNode.getDescription().equalsIgnoreCase(""))
 	    mList.append(mNode.getDescription(), null);
 	mList.append("Breitengrad " + mNode.getLat(), null);
-	mList.append("L‰ngengrad " + mNode.getLon(), null);
+	mList.append("L√§ngengrad " + mNode.getLon(), null);
 
 	if (OptionsStore.vibrate)
 	    try {

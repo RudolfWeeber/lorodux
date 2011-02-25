@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -16,10 +16,10 @@
  */
 
 /**
- * Diese Klasse gehˆrt zur LoroDux MIDlet Suite.
+ * Diese Klasse geh√∂rt zur LoroDux MIDlet Suite.
  * Sie dient jeder anderen Klasse als einfaches Eingabefeld.
  * 
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  * 06.05.2010 - Erste Implementierung
  * 09.05.2010 - Im Zuge der Implementierung des MIDlets als Singleton angepasst
  * 07.06.2010 - Konstruktor um Zeichenanzahl erweitert
@@ -53,7 +53,7 @@ public class SimpleInputView implements CommandListener{
      * @param charcount
      * 		Maximale Anzahl von Zeichen, die erlaubt sein sollen
      * @param constraints
-     * 		Constraints f¸r das TextField
+     * 		Constraints f√ºr das TextField
      */
     public SimpleInputView(final View view, final String title, final int charcount, final int constraints){
 	mView = view;

@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -16,10 +16,10 @@
  */
 
 /**
- * Diese Klasse gehˆrt zur LoroDux MIDlet Suite.
+ * Diese Klasse geh√∂rt zur LoroDux MIDlet Suite.
  * Dient zur einfachen Speicherung von OSMNodes.
  * 
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  * Datum 05.05.2010
  * 
  * Datum 16.05.2010

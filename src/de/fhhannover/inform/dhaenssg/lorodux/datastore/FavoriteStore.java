@@ -1,5 +1,5 @@
 /* 
- * Copyright 2010 Daniel H‰nﬂgen (daniel.haenssgen@stud.fh-hannover.de)
+ * Copyright 2010 Daniel H√§n√ügen (daniel.haenssgen@stud.fh-hannover.de)
  * All Rights Reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER
  * 
@@ -20,7 +20,7 @@
  * Genutzt wird der RecordStore von J2ME.
  * Import und Export-Funktionen werden folgen
  * 
- * @author Daniel H‰nﬂgen
+ * @author Daniel H√§n√ügen
  * 07.04.2010 stub-Klasse
  * 11.04.2010 Implementierung der Funktionen (ohne RMS)
  * 12.04.2010 Implementierung der Verwendung von RMS
@@ -47,7 +47,7 @@ import de.fhhannover.inform.dhaenssg.lorodux.entity.Favorite;
 public class FavoriteStore {
 
     /**
-     * Vector, der die Daten tempor‰r h‰lt.
+     * Vector, der die Daten tempor√§r h√§lt.
      */
     private static Vector mStore = new Vector();
 
@@ -162,10 +162,10 @@ public class FavoriteStore {
     }
 
     /**
-     * F¸gt ein Favorite Object alphabetisch sortiert dem Vector hinzu. Als
+     * F√ºgt ein Favorite Object alphabetisch sortiert dem Vector hinzu. Als
      * Sortier-Algorithmus wird Insertionsort verwendet
      * 
-     * @param Favorit-Objekt, der hinzugef¸gt werden soll.
+     * @param Favorit-Objekt, der hinzugef√ºgt werden soll.
      */
     public static boolean add(Favorite favorite) {
 	if (mStore.size() == 0) {
