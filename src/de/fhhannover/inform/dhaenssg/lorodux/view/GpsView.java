@@ -66,6 +66,7 @@ public class GpsView extends View {
 	    mList.append("Längengrad " + pos.getLon(), null);
 	    mList.append("Richtung " + pos.getHeading() + " Grad", null);
 	    mList.append(pos.getSpeed() + " kilometer pro stunde", null);
+	    mList.append("DetailInfo: " + pos.getInfo(), null);
 
 	} catch (NullPointerException e) {
 	    LoroDux.displayStringOnMainView("GpsView: " + e.toString());

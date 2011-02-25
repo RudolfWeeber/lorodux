@@ -49,6 +49,8 @@ public class Position {
     private byte mSatellites;
     private float mHDOP;
     private boolean mStatus;
+    private String mInfo;
+   
 
     public Position() {
 	mDate = new Calendar() {
@@ -81,6 +83,7 @@ public class Position {
 	newPosition.mSatellites = mSatellites;
 	newPosition.mHDOP = mHDOP;
 	newPosition.mStatus = mStatus;
+        newPosition.mInfo = mInfo;
 	return newPosition;
     }
 
@@ -106,13 +109,23 @@ public class Position {
 	mDate.set(Calendar.YEAR, Integer.parseInt(ddmmyy.substring(4, 6)));
     }
     
-    public void setDate(long timeInMs) {
-      mDate.setTime(new Date(timeInMs));
+    public void setDateMs(long timeInMs) {
+      Date d = new Date(timeInMs);
+      mDate.setTime(d);
     }
 
     public float getLat() {
 	return mLat;
     }
+
+    public void setInfo(String info) {
+      mInfo=info;
+    }
+
+    public String getInfo() {
+      return mInfo;
+    }
+
 
     public float getLon() {
 	return mLon;
