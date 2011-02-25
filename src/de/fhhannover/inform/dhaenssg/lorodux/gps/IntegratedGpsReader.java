@@ -80,8 +80,14 @@ public class IntegratedGpsReader implements GpsReader, LocationListener {
        }
        // Update position object with basic info from gps
        pos.setCoordinates((float)loc.getQualifiedCoordinates().getLatitude(),(float)loc.getQualifiedCoordinates().getLongitude());
-       pos.setSpeed(loc.getSpeed());
-       pos.setHeading((short) loc.getCourse());
+       // The location object is not guaranteed to contain a valid speed and dir
+       if (loc.getSpeed()!=Double.NaN)
+       {
+         // We multiply by 3.6 to convert m/s to km/h
+         pos.setSpeed((float)(loc.getSpeed() *3.6));
+         pos.setHeading((short) loc.getCourse());
+       }
+       pos.setDate(loc.getTimestamp());
        pos.setStatus(true); // Means: a position was reported
 	       
        // Todo: Find out number of satelites ()

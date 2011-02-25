@@ -34,6 +34,7 @@
 
 package de.fhhannover.inform.dhaenssg.lorodux.entity;
 
+import java.util.Date;
 import java.util.Calendar;
 
 import de.fhhannover.inform.dhaenssg.lorodux.util.MathSupport;
@@ -103,6 +104,10 @@ public class Position {
 		.substring(0, 2)));
 	mDate.set(Calendar.MONTH, Integer.parseInt(ddmmyy.substring(2, 4)));
 	mDate.set(Calendar.YEAR, Integer.parseInt(ddmmyy.substring(4, 6)));
+    }
+    
+    public void setDate(long timeInMs) {
+      mDate.setTime(new Date(timeInMs));
     }
 
     public float getLat() {
