@@ -80,6 +80,8 @@ public class IntegratedGpsReader implements GpsReader, LocationListener {
        }
        // Update position object with basic info from gps
        pos.setCoordinates((float)loc.getQualifiedCoordinates().getLatitude(),(float)loc.getQualifiedCoordinates().getLongitude());
+       pos.setAccuracy(loc.getQualifiedCoordinates().getHorizontalAccuracy());
+
        // The location object is not guaranteed to contain a valid speed and dir
        if (loc.getSpeed()>=0.0)
        {
@@ -87,14 +89,12 @@ public class IntegratedGpsReader implements GpsReader, LocationListener {
          pos.setSpeed((float)(loc.getSpeed() *3.6));
          pos.setHeading((short) loc.getCourse());
        }
-       pos.setDateMs(loc.getTimestamp());
+       pos.setTimestamp(loc.getTimestamp());
        pos.setStatus(true); // Means: a position was reported
-       pos.setInfo(loc.getTimestamp() + loc.getExtraInfo("text/plain") );
+       pos.setInfo(loc.getExtraInfo("text/plain") );
 	       
        // Todo: Find out number of satelites ()
        // http://discussion.forum.nokia.com/forum/showthread.php?124912-How-to-know-the-number-of-GPS-satellites
-
-       // Todo: Date/time
 
     }
 

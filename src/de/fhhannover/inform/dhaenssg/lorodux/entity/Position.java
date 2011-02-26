@@ -50,6 +50,8 @@ public class Position {
     private float mHDOP;
     private boolean mStatus;
     private String mInfo;
+    private float mAccuracy;
+    private long mTimestamp;
    
 
     public Position() {
@@ -66,6 +68,8 @@ public class Position {
 	mSatellites = 0;
 	mHDOP = -1;
 	mStatus = false;
+	mTimestamp =0;
+	mAccuracy =0.0f;
     }
 
     /**
@@ -84,6 +88,9 @@ public class Position {
 	newPosition.mHDOP = mHDOP;
 	newPosition.mStatus = mStatus;
         newPosition.mInfo = mInfo;
+	newPosition.mTimestamp =mTimestamp;
+	newPosition.mAccuracy =mAccuracy;
+
 	return newPosition;
     }
 
@@ -113,6 +120,24 @@ public class Position {
       Date d = new Date(timeInMs);
       mDate.setTime(d);
     }
+    
+    public void setAccuracy(float acc) {
+      mAccuracy=acc;
+    }
+
+    public float getAccuracy() {
+      return mAccuracy;
+    }
+
+    public void setTimestamp(long t) {
+      mTimestamp =t;
+    }
+
+    public long getTimestamp() {
+      return mTimestamp;
+    }
+
+
 
     public float getLat() {
 	return mLat;

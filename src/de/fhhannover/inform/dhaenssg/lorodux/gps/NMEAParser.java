@@ -76,9 +76,11 @@ public class NMEAParser {
 		 * Setze Uhrzeit und Datum
 		 */
 		pos.setDate(s[1], s[9]);
+		pos.setTimestamp(pos.getDate().getTime().getTime());
 
 		pos.setCoordinates(GpsDataUtils.convertToDegree(s[3], s[4]),
 			GpsDataUtils.convertToDegree(s[5], s[6]));
+                
 
 		/*
 		 * Wenn zum ersten Mal gültige GPS Daten vorhanden sind wird

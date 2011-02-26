@@ -32,6 +32,7 @@ import javax.microedition.lcdui.List;
 import de.fhhannover.inform.dhaenssg.lorodux.LoroDux;
 import de.fhhannover.inform.dhaenssg.lorodux.entity.ActualPosition;
 import de.fhhannover.inform.dhaenssg.lorodux.entity.Position;
+import de.fhhannover.inform.dhaenssg.lorodux.datastore.OptionsStore;
 
 public class GpsView extends View {
 
@@ -59,14 +60,22 @@ public class GpsView extends View {
     public void set(final Position pos) {
 	try {
 	    mList.deleteAll();
-	    mList.append("Anzahl Satelliten " + pos.getSatellites(), null);
-	    mList.append("HDOP " + pos.getHDOP(), null);
-	    mList.append(pos.getDateAsString(), null);
+	    if (OptionsStore.internalGps==false) {
+	      mList.append("Anzahl Satelliten " + pos.getSatellites(), null);
+	      mList.append("HDOP " + pos.getHDOP(), null);
+	      mList.append(pos.getDateAsString(), null);
+	    }
+	    else
+	    {
+	      mList.append("Genauigkeit: " +pos.getAccuracy()+" meter", null);
+	    }
 	    mList.append("Breitengrad " + pos.getLat(), null);
 	    mList.append("Längengrad " + pos.getLon(), null);
 	    mList.append("Richtung " + pos.getHeading() + " Grad", null);
 	    mList.append(pos.getSpeed() + " kilometer pro stunde", null);
-	    mList.append("DetailInfo: " + pos.getInfo(), null);
+	    if (pos.getInfo() != null) {
+	      mList.append("DetailInfo: " + pos.getInfo(), null);
+	    }
 
 	} catch (NullPointerException e) {
 	    LoroDux.displayStringOnMainView("GpsView: " + e.toString());
